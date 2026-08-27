@@ -37,8 +37,11 @@
 ## Commands
 
 ```text
-Not yet established
+npm test           # vitest run：一次性运行全部测试
+npm run typecheck  # TypeScript 严格模式类型检查
 ```
+
+真实站点/真实浏览器的人工验证在真实环境执行，证据记录于对应 Feature 的交付记录。
 
 ## Feature Test Design Rule
 

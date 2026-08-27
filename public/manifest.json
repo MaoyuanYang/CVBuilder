@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CVBuilder",
+  "version": "0.1.0",
+  "description": "自动填写网申在线简历表单，数据仅保存在本地。",
+  "permissions": ["storage", "unlimitedStorage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
