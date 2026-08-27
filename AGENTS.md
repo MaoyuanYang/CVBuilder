@@ -53,9 +53,9 @@ The key lines above are repository-wide fallbacks.
 ## Build and Test
 
 ```text
-Start: Not yet established
-Build: Not yet established
-Test:  Not yet established
+Start: npm install && npm run build  (load dist/ via chrome://extensions -> Load unpacked)
+Build: npm run build
+Test:  npm test
 ```
 
 - An unavailable command MUST be written exactly as `Not yet established`; commands MUST NOT be invented. When tooling changes, update this file, README, and `docs/TESTING.md` together.
@@ -91,7 +91,7 @@ Only deepen the selected `NEXT` Spec. MUST NOT prematurely finalize unrelated DR
 
 ## Work Tracking and Delivery
 
-- Tracking mode: `LOCAL`（未绑定远端跟踪器；需要时迁移至 GitHub Issues 并更新本行与 `STAGE.md` Tracking Mode）。
+- Tracking mode: `REMOTE`（F001 于 2026-08-27 绑定 GitHub Issue 为 Work Status 权威；后续 Feature 默认沿用，例外需记录）。
 - `STAGE.md` owns the current project phase, active-member coordination, blockers, handoffs, and resume points. It links to controlling artifacts and MUST NOT copy their content.
 - Before `feature-dev`, `specs/ROADMAP.md` owns only initial `DRAFT/NEXT/BLOCKED`; `BLOCKED` requires a named blocker and unblock condition. Once a work item is bound, its remote tracker is the writable Work Status authority. When no remote is bound, the activity row identified by `STAGE_LOCAL:<Activity ID>` in `STAGE.md` is the local Work Status authority. Roadmap is a synchronized projection in either mode.
 - Update `STAGE.md` only at assignment, meaningful workflow transition, block/resume, handoff, and completion. Preserve unrelated member rows and record conflicts instead of silently overwriting them.
@@ -204,3 +204,4 @@ Code MUST NOT remain ahead of its controlling documentation. MUST NOT update una
 - 对 React/Vue 受控组件直接 `el.value = x` 不会触发框架状态更新：必须使用原生 setter（`Object.getOwnPropertyDescriptor(...).set`）并派发 `input`/`change` 事件，且需在真实站点验证。
 - 网申页面标签形态多样（label/placeholder/aria/前序文本/表格行）：标签提取必须多策略尝试，任何单一策略都会显著降低命中率。
 - 扩展运行在第三方页面：样式与事件处理必须隔离，禁止依赖或污染页面全局对象。
+- 组件默认参数若是对象（如注入的依赖），每次渲染都会重建新实例：不得将其放入 effect 依赖，须用 `useRef`/`useState` 固定，否则触发加载循环；jsdom 单测可能掩盖此类问题，真实环境验证不可省。

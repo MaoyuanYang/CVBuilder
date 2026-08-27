@@ -6,53 +6,57 @@
 
 | Field | Value |
 | --- | --- |
-| Snapshot Revision | `STAGE-002` |
-| Parent Snapshot | `STAGE-001 + sha256:e98c17ad7cbd27aa56367ad98ea5e5777d92471901d5bfb97067dc5f02240848` |
-| Last Reconciled At | `2026-08-26T21:55:10+08:00` |
-| Reconciled By | `opencode agent (coding-start)` |
-| Repository Ref | `main @ e90dc38 (working tree has uncommitted initialization docs)` |
-| Write Coordination | `SINGLE_WRITER:opencode agent (coding-start session)` |
+| Snapshot Revision | `STAGE-004` |
+| Parent Snapshot | `STAGE-003 + sha256:e6c611ab9ce7fe654368c9f898b8eedb1594cf3895c002626413014b395c2c2a` |
+| Last Reconciled At | `2026-08-27T15:43:52+08:00` |
+| Reconciled By | `opencode agent (feature-dev)` |
+| Repository Ref | `feature/f001-resume-data-entry @ working tree (uncommitted F001 implementation + docs)` |
+| Write Coordination | `SINGLE_WRITER:opencode agent (feature-dev session)` |
 | Lifecycle Path | `GREENFIELD` |
-| Project Phase | `INITIALIZATION` |
+| Project Phase | `DELIVERY` |
 | Overall State | `WAITING` |
-| Current Milestone | `Greenfield 初始化完成，等待 feature-dev 接手 F001` |
-| Tracking Mode | `LOCAL` |
+| Current Milestone | `F001 简历数据录入：实现与自评审完成，READY FOR PR，待人工验证与交付授权` |
+| Tracking Mode | `REMOTE` |
 
 ## Lifecycle Progress
 
 | Area / Milestone | State | Authoritative Evidence | Next Condition |
 | --- | --- | --- | --- |
-| Greenfield 初始化（Discovery → Gate → 文档 → Feature Map） | `COMPLETE` | 本文件 Handoffs；`specs/ROADMAP.md` Handoff Branch A | `feature-dev` 接受交接并绑定工作项 |
+| Greenfield 初始化（Discovery → Gate → 文档 → Feature Map） | `COMPLETE` | 本文件 Handoffs；`specs/ROADMAP.md` Handoff Branch A；commit `e6f508c` | （已完成） |
+| F001 简历数据录入（MVP 第一个 Feature） | `ACTIVE` | GitHub Issue #2（Work Status 权威）；`specs/F001-resume-data-entry/review.md` | 真机人工验证 + 交付授权 + PR 合并 |
 
 ## Active Work
 
 | Activity ID | Work Item | Member | Type | Skill | Skill Stage | Activity State | Work Status | Branch / Worktree | Status Authority | Next Checkpoint | Updated At |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `A-001` | `coding-start：Greenfield 初始化` | `opencode agent` | `AGENT` | `coding-start` | `NEXT_SELECTION` | `HANDOFF` | `N/A` | `main` | `N/A - project workflow activity` | `feature-dev 创建接收活动并接受交接` | `2026-08-26T21:55:10+08:00` |
+| `A-002` | `F001 简历数据录入` | `opencode agent` | `AGENT` | `feature-dev` | `DELIVERY` | `WAITING` | `REVIEW` | `feature/f001-resume-data-entry` | `https://github.com/MaoyuanYang/CVBuilder/issues/2` | `用户真机验证清单 + commit/push/PR/merge 授权` | `2026-08-27T15:43:52+08:00` |
 
 ## Gate Snapshot
 
 | Work Item | Gate | Projection | Authoritative Record / Revision |
 | --- | --- | --- | --- |
-| （尚无 Gate 记录；SPEC READY 等属 `feature-dev` 阶段） | `N/A` | `N/A` | `N/A` |
+| `F001` | `SPEC READY` | `PASS` | `specs/F001-resume-data-entry/spec.md` Gate Record（Spec R2，2026-08-27） |
+| `F001` | `UI READY` | `PASS` | `specs/F001-resume-data-entry/ui.md` UI READY Record（UI-R1，2026-08-27） |
+| `F001` | `TEST DESIGN READY` | `PASS` | `specs/F001-resume-data-entry/test-design.md` Gate Record（TD-R1，2026-08-27） |
+| `F001` | `DONE` | `NOT_READY` | `specs/F001-resume-data-entry/review.md` Final State（待真机验证与交付） |
 
 ## Blockers and Conflicts
 
 | ID | Affected Activity / Work Item | Type | Evidence | Owner | Unblock / Resolution Condition |
 | --- | --- | --- | --- | --- | --- |
-| （暂无） | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` |
+| `B-001` | `A-002 / F001` | 交付待决：真机人工验证未执行，且 commit/push/PR/merge 未获授权 | `review.md` Verification Results / Delivery Authorization | MaoyuanYang | 用户执行真机验证清单并授权交付动作 |
 
 ## Handoffs
 
 | From | To | Work Item | Resume From | Required Inputs | Authority Transfer | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `coding-start (A-001)` | `feature-dev（接收活动待创建）` | `F001 简历数据录入` | `Spec Clarification and Refinement` | `specs/ROADMAP.md` Handoff Branch A；`specs/F001-resume-data-entry/spec.md`；`docs/`；`AGENTS.md` | `STAGE_LOCAL:A-001 -> 待接收方活动创建后转移` | `PENDING` |
+| `coding-start (A-001)` | `feature-dev (A-002)` | `F001 简历数据录入` | `Spec Clarification and Refinement` | `specs/ROADMAP.md` Handoff Branch A；`specs/F001-resume-data-entry/spec.md`；`docs/`；`AGENTS.md` | `N/A - project workflow activity -> GitHub Issue #2（F001 Work Status 权威）` | `COMPLETE` |
 
 ## Recently Completed
 
 | Activity ID | Work Item | Member | Outcome | Final Work Status | Final Status Authority | Delivery Evidence | Completed At |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| （交接接受后归档 A-001） | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` |
+| `A-001` | `coding-start：Greenfield 初始化` | `opencode agent` | `MACRO DESIGN READY；全部项目文档与 Feature Map（F001 NEXT）生成` | `N/A` | `N/A - project workflow activity` | `commit e6f508c；specs/ROADMAP.md` | `2026-08-27T14:50:45+08:00` |
 
 ## Authority and Update Rules
 

@@ -32,19 +32,22 @@
 ## Start
 
 ```text
-Not yet established
+npm install
+npm run build
 ```
+
+然后在 Chrome/Edge 打开 `chrome://extensions`，开启开发者模式，选择“加载已解压的扩展程序”，加载 `dist/` 目录；在扩展卡片上点击“选项”打开配置页。
 
 ## Build
 
 ```text
-Not yet established
+npm run build
 ```
 
 ## Test
 
 ```text
-Not yet established
+npm test
 ```
 
 ## Documentation
@@ -68,4 +71,4 @@ Not yet established
 
 ## License
 
-- [CONFIRMED] MIT（`LICENSE` 文件待补）。
+- [CONFIRMED] MIT（见 [`LICENSE`](LICENSE)）。
