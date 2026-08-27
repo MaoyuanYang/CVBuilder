@@ -21,7 +21,7 @@
 | ID | Name | Goal | Business Value | Priority | Dependencies | Roadmap Status | Fact Status | Summary / Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `F001` | 简历数据录入 | 用户在配置页录入并本地持久化全部简历数据 | 一切填写能力的前提；本身即结构化简历存档 | `P0` | 无 | `DONE` | `CONFIRMED` | 已交付：PR #3 squash 合并（main @ `12af027`，2026-08-27）；23 项自动化测试 + 真机验证通过；review.md DONE PASS |
-| `F002` | 一键自动填写 | 网申页面一键填写命中字段并高亮汇报 | 产品核心价值；验证“标签识别+别名匹配”关键假设 | `P0` | `F001` | `IN_PROGRESS` | `CONFIRMED` | 2026-08-27 确认为 NEXT（MaoyuanYang），Issue #4；Gate 三 PASS；PLAN-R1 批准 |
+| `F002` | 一键自动填写 | 网申页面一键填写命中字段并高亮汇报 | 产品核心价值；验证“标签识别+别名匹配”关键假设 | `P0` | `F001` | `DONE` | `CONFIRMED` | 已交付：PR #5 squash 合并（main @ `738ff1b`，2026-08-27）；50 项自动化测试 + 真机验证通过；review.md DONE PASS |
 | `F003` | 手动兜底填写 | 未命中字段点击选值填入 | 保证 100% 字段可达，兜住结构差异 | `P0` | `F002` | `DRAFT` | `CONFIRMED` | 点击字段唤起页内浮层，列出数据项选择填入 |
 | `F004` | 按域名规则记忆 | 手动纠正映射按域名记忆并优先应用 | 重复投递同站点时不重复劳动，越用越准 | `P0` | `F003` | `DRAFT` | `CONFIRMED` | 纠正/补填回写域名规则；填写时规则优先于词典 |
 

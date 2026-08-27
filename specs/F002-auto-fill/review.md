@@ -118,19 +118,22 @@ F002（`specs/F002-auto-fill/`）；Issue #4；依赖 F001（DONE）。
 ## Delivery Authorization and Status
 
 - Project Definition of Done (DoD): `PR merged`
-- Explicitly authorized actions: `commit | push | create PR`（2026-08-27 验证通过后授权；merge 待单独授权）
+- Explicitly authorized actions: `commit | push | create PR | merge`（merge 于 2026-08-27 单独授权）
 - Tool/auth available: `git` + `gh`
-- Actions actually performed: 无
-- Actions not performed: commit、push、create PR、merge
-- Links/revisions: 分支 `feature/f002-auto-fill`
-- Delivery state: `READY FOR PR`
+- Actions actually performed: commit `aca8a6f`；push；PR #5；squash merge `738ff1b`；远端分支删除；Issue #4 关闭
+- Actions not performed: 无
+- Links/revisions: PR https://github.com/MaoyuanYang/CVBuilder/pull/5；main @ `738ff1b`
+- Delivery state: `DELIVERED`
 
 ## Final State
 
-- `DONE` Status: `NOT_READY`
-- Validated delivery revision: 未交付
-- Decision Authority (named human + role): MaoyuanYang
-- Roadmap Status: `REVIEW`
-- If not DONE, exact blocker/unperformed action: 1) 用户真机验证；2) 交付授权与合并。
-- Resume from: `DELIVERY`
-- Final Stage activity state / snapshot revision: `REVIEW` / `STAGE-007`
+- `DONE` Status: `PASS`
+- Validated delivery revision: main @ `738ff1b`（PR #5 squash merge）
+- Validated at: 2026-08-27T18:00+08:00
+- Decision Authority (named human + role): MaoyuanYang（仓库 owner / Feature 决策人）
+- Approval source: feature-dev 会话内显式授权合并（2026-08-27）
+- Approval scope: PR #5 squash 合并、分支删除、F002 DONE 收尾
+- Roadmap Status: `DONE`
+- If not DONE, exact blocker/unperformed action: 无
+- Resume from: N/A
+- Final Stage activity state / snapshot revision: `COMPLETE` / `STAGE-008`

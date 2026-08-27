@@ -26,7 +26,7 @@
 - [CONFIRMED] Live project and member status: [`STAGE.md`](STAGE.md)
 - [CONFIRMED] Macro design: `MACRO DESIGN READY`
 - [CONFIRMED] Business implementation: Not started
-- [CONFIRMED] Feature planning: `F001` 已 `DONE`（PR #3，2026-08-27）；F002-F004 为 `DRAFT`，下一个 `NEXT` 待选择
+- [CONFIRMED] Feature planning: `F001`、`F002` 已 `DONE`（PR #3、#5，2026-08-27）；F003-F004 为 `DRAFT`，下一个 `NEXT` 待选择
 - [CONFIRMED] Handoff: 使用 `feature-dev` 选择并细化下一个 Feature
 
 ## Start
