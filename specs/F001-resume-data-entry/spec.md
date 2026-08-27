@@ -2,7 +2,7 @@
 
 - Spec Revision: `R2`（R1 = coding-start DRAFT，commit `e6f508c`）
 - Spec Status: `REFINED`
-- Roadmap Status: `NEXT`
+- Roadmap Status: `DONE`
 - Issue: https://github.com/MaoyuanYang/CVBuilder/issues/2
 - Priority: `P0`
 - Owner: MaoyuanYang（决策）/ opencode agent（实现）

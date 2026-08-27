@@ -6,16 +6,16 @@
 
 | Field | Value |
 | --- | --- |
-| Snapshot Revision | `STAGE-004` |
-| Parent Snapshot | `STAGE-003 + sha256:e6c611ab9ce7fe654368c9f898b8eedb1594cf3895c002626413014b395c2c2a` |
-| Last Reconciled At | `2026-08-27T15:43:52+08:00` |
+| Snapshot Revision | `STAGE-006` |
+| Parent Snapshot | `STAGE-005 + sha256:cac92b626a4e10a18c9e009788a457dd1cde81f92f74ca7d3a6ef8e27915dd74` |
+| Last Reconciled At | `2026-08-27T16:49:03+08:00` |
 | Reconciled By | `opencode agent (feature-dev)` |
-| Repository Ref | `feature/f001-resume-data-entry @ working tree (uncommitted F001 implementation + docs)` |
+| Repository Ref | `main @ 12af027 (F001 merged; working tree has DONE-sync edits)` |
 | Write Coordination | `SINGLE_WRITER:opencode agent (feature-dev session)` |
 | Lifecycle Path | `GREENFIELD` |
 | Project Phase | `DELIVERY` |
 | Overall State | `WAITING` |
-| Current Milestone | `F001 简历数据录入：实现与自评审完成，READY FOR PR，待人工验证与交付授权` |
+| Current Milestone | `F001 DONE；下一个 NEXT 待选择（F002-F004 DRAFT）` |
 | Tracking Mode | `REMOTE` |
 
 ## Lifecycle Progress
@@ -23,13 +23,13 @@
 | Area / Milestone | State | Authoritative Evidence | Next Condition |
 | --- | --- | --- | --- |
 | Greenfield 初始化（Discovery → Gate → 文档 → Feature Map） | `COMPLETE` | 本文件 Handoffs；`specs/ROADMAP.md` Handoff Branch A；commit `e6f508c` | （已完成） |
-| F001 简历数据录入（MVP 第一个 Feature） | `ACTIVE` | GitHub Issue #2（Work Status 权威）；`specs/F001-resume-data-entry/review.md` | 真机人工验证 + 交付授权 + PR 合并 |
+| F001 简历数据录入（MVP 第一个 Feature） | `COMPLETE` | PR #3 squash 合并（main @ `12af027`）；`review.md` DONE PASS；Issue #2 关闭 | 用户选择下一个 NEXT 并启动 `feature-dev` |
 
 ## Active Work
 
 | Activity ID | Work Item | Member | Type | Skill | Skill Stage | Activity State | Work Status | Branch / Worktree | Status Authority | Next Checkpoint | Updated At |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `A-002` | `F001 简历数据录入` | `opencode agent` | `AGENT` | `feature-dev` | `DELIVERY` | `WAITING` | `REVIEW` | `feature/f001-resume-data-entry` | `https://github.com/MaoyuanYang/CVBuilder/issues/2` | `用户真机验证清单 + commit/push/PR/merge 授权` | `2026-08-27T15:43:52+08:00` |
+| （暂无活跃活动；下一个 Feature 启动时分配 `A-003`） | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` |
 
 ## Gate Snapshot
 
@@ -38,13 +38,13 @@
 | `F001` | `SPEC READY` | `PASS` | `specs/F001-resume-data-entry/spec.md` Gate Record（Spec R2，2026-08-27） |
 | `F001` | `UI READY` | `PASS` | `specs/F001-resume-data-entry/ui.md` UI READY Record（UI-R1，2026-08-27） |
 | `F001` | `TEST DESIGN READY` | `PASS` | `specs/F001-resume-data-entry/test-design.md` Gate Record（TD-R1，2026-08-27） |
-| `F001` | `DONE` | `NOT_READY` | `specs/F001-resume-data-entry/review.md` Final State（待真机验证与交付） |
+| `F001` | `DONE` | `PASS` | `specs/F001-resume-data-entry/review.md` Final State（PR #3，main @ `12af027`，2026-08-27） |
 
 ## Blockers and Conflicts
 
 | ID | Affected Activity / Work Item | Type | Evidence | Owner | Unblock / Resolution Condition |
 | --- | --- | --- | --- | --- | --- |
-| `B-001` | `A-002 / F001` | 交付待决：真机人工验证未执行，且 commit/push/PR/merge 未获授权 | `review.md` Verification Results / Delivery Authorization | MaoyuanYang | 用户执行真机验证清单并授权交付动作 |
+| （暂无；B-001 已随 PR #3 合并解决） | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` |
 
 ## Handoffs
 
@@ -57,6 +57,7 @@
 | Activity ID | Work Item | Member | Outcome | Final Work Status | Final Status Authority | Delivery Evidence | Completed At |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `A-001` | `coding-start：Greenfield 初始化` | `opencode agent` | `MACRO DESIGN READY；全部项目文档与 Feature Map（F001 NEXT）生成` | `N/A` | `N/A - project workflow activity` | `commit e6f508c；specs/ROADMAP.md` | `2026-08-27T14:50:45+08:00` |
+| `A-002` | `F001 简历数据录入` | `opencode agent` | `DONE：三个 Gate PASS；23 项自动化测试；真机验证通过；PR #3 合并` | `DONE` | `https://github.com/MaoyuanYang/CVBuilder/issues/2`（closed） | `PR #3；main @ 12af027` | `2026-08-27T16:49:03+08:00` |
 
 ## Authority and Update Rules
 

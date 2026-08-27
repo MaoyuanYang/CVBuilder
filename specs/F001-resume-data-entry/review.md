@@ -124,12 +124,12 @@ F001（`specs/F001-resume-data-entry/`：spec R2 / ui UI-R1 / test-design TD-R1 
 ## Delivery Authorization and Status
 
 - Project Definition of Done (DoD): `PR merged`
-- Explicitly authorized actions: `commit | push | create PR`（验证通过后用户授权，2026-08-27；merge 未授权）
+- Explicitly authorized actions: `commit | push | create PR | merge`（commit/push/PR 于验证通过后授权；merge 于 2026-08-27 单独授权）
 - Tool/auth available: `git` + `gh`（已认证为 MaoyuanYang）
-- Actions actually performed: 待执行（commit/push/create PR）
-- Actions not performed: `merge`、Issue 关闭
-- Links/revisions: 分支 `feature/f001-resume-data-entry`
-- Delivery state: `READY FOR PR`
+- Actions actually performed: commit `2c4160c`；push；PR #3；squash merge `12af027`；远端分支删除；Issue #2 关闭
+- Actions not performed: 无
+- Links/revisions: PR https://github.com/MaoyuanYang/CVBuilder/pull/3；main @ `12af027`
+- Delivery state: `DELIVERED`
 
 ## `DONE` Input Manifest
 
@@ -176,14 +176,14 @@ F001（`specs/F001-resume-data-entry/`：spec R2 / ui UI-R1 / test-design TD-R1 
 
 ## Final State
 
-- `DONE` Status: `NOT_READY`
-- `DONE` input manifest revision/hash: 见上表
-- Validated delivery revision: 未交付
-- Validated at: 2026-08-27T15:43+08:00
+- `DONE` Status: `PASS`
+- `DONE` input manifest revision/hash: 见上表（Spec R2 / UI-R1 / TD-R1 / PLAN-R1 均无语义变更）
+- Validated delivery revision: main @ `12af027`（PR #3 squash merge）
+- Validated at: 2026-08-27T16:45+08:00
 - Decision Authority (named human + role): MaoyuanYang（仓库 owner / Feature 决策人）
-- Approval source: 待用户交付授权
-- Approval scope: 待定
-- Roadmap Status: `REVIEW`
-- If not DONE, exact blocker/unperformed action: 1) 用户执行真实浏览器人工验证清单；2) 用户授权 commit/push/PR/merge；3) PR 合并后更新 Issue 与 STAGE。
-- Resume from: `DELIVERY`
-- Final Stage activity state / snapshot revision: `REVIEW` / `STAGE-003`
+- Approval source: feature-dev 会话内显式授权合并（2026-08-27）
+- Approval scope: PR #3 squash 合并、分支删除、F001 DONE 收尾
+- Roadmap Status: `DONE`
+- If not DONE, exact blocker/unperformed action: 无
+- Resume from: N/A
+- Final Stage activity state / snapshot revision: `COMPLETE` / `STAGE-006`
