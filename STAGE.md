@@ -6,16 +6,16 @@
 
 | Field | Value |
 | --- | --- |
-| Snapshot Revision | `STAGE-006` |
-| Parent Snapshot | `STAGE-005 + sha256:cac92b626a4e10a18c9e009788a457dd1cde81f92f74ca7d3a6ef8e27915dd74` |
-| Last Reconciled At | `2026-08-27T16:49:03+08:00` |
+| Snapshot Revision | `STAGE-007` |
+| Parent Snapshot | `STAGE-006 + sha256:150b233d8db7dc23b6fcbb14bf4c65127838a8f3d4fe1b3ac3ba75b2ebbe8e93` |
+| Last Reconciled At | `2026-08-27T16:58:43+08:00` |
 | Reconciled By | `opencode agent (feature-dev)` |
-| Repository Ref | `main @ 12af027 (F001 merged; working tree has DONE-sync edits)` |
+| Repository Ref | `main @ 7195e08 (clean)` |
 | Write Coordination | `SINGLE_WRITER:opencode agent (feature-dev session)` |
 | Lifecycle Path | `GREENFIELD` |
 | Project Phase | `DELIVERY` |
-| Overall State | `WAITING` |
-| Current Milestone | `F001 DONE；下一个 NEXT 待选择（F002-F004 DRAFT）` |
+| Overall State | `ACTIVE` |
+| Current Milestone | `F002 一键自动填写：已绑定 Issue #4，进入 Spec 细化` |
 | Tracking Mode | `REMOTE` |
 
 ## Lifecycle Progress
@@ -23,13 +23,14 @@
 | Area / Milestone | State | Authoritative Evidence | Next Condition |
 | --- | --- | --- | --- |
 | Greenfield 初始化（Discovery → Gate → 文档 → Feature Map） | `COMPLETE` | 本文件 Handoffs；`specs/ROADMAP.md` Handoff Branch A；commit `e6f508c` | （已完成） |
-| F001 简历数据录入（MVP 第一个 Feature） | `COMPLETE` | PR #3 squash 合并（main @ `12af027`）；`review.md` DONE PASS；Issue #2 关闭 | 用户选择下一个 NEXT 并启动 `feature-dev` |
+| F001 简历数据录入（MVP 第一个 Feature） | `COMPLETE` | PR #3 squash 合并（main @ `12af027`）；`review.md` DONE PASS；Issue #2 关闭 | （已完成） |
+| F002 一键自动填写 | `ACTIVE` | GitHub Issue #4（Work Status 权威） | `SPEC READY` Gate 通过 |
 
 ## Active Work
 
 | Activity ID | Work Item | Member | Type | Skill | Skill Stage | Activity State | Work Status | Branch / Worktree | Status Authority | Next Checkpoint | Updated At |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| （暂无活跃活动；下一个 Feature 启动时分配 `A-003`） | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` | `N/A` |
+| `A-003` | `F002 一键自动填写` | `opencode agent` | `AGENT` | `feature-dev` | `REVIEW` | `WAITING` | `REVIEW` | `feature/f002-auto-fill` | `https://github.com/MaoyuanYang/CVBuilder/issues/4` | `用户真机验证 + 交付授权` | `2026-08-27T17:50:00+08:00` |
 
 ## Gate Snapshot
 
@@ -39,6 +40,9 @@
 | `F001` | `UI READY` | `PASS` | `specs/F001-resume-data-entry/ui.md` UI READY Record（UI-R1，2026-08-27） |
 | `F001` | `TEST DESIGN READY` | `PASS` | `specs/F001-resume-data-entry/test-design.md` Gate Record（TD-R1，2026-08-27） |
 | `F001` | `DONE` | `PASS` | `specs/F001-resume-data-entry/review.md` Final State（PR #3，main @ `12af027`，2026-08-27） |
+| `F002` | `SPEC READY` | `PASS` | `specs/F002-auto-fill/spec.md` Gate Record（Spec R2，2026-08-27） |
+| `F002` | `UI READY` | `PASS` | `specs/F002-auto-fill/ui.md` UI READY Record（UI-R1，2026-08-27） |
+| `F002` | `TEST DESIGN READY` | `PASS` | `specs/F002-auto-fill/test-design.md` Gate Record（TD-R1，2026-08-27） |
 
 ## Blockers and Conflicts
 

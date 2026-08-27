@@ -1,0 +1,63 @@
+.popup {
+  width: 360px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.popup h1 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.popup .counts {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.popup .counts .filled {
+  color: var(--success);
+}
+
+.popup .counts .skipped {
+  color: var(--muted);
+}
+
+.popup .counts .unmatched {
+  color: var(--danger);
+}
+
+.popup .group h2 {
+  font-size: 13px;
+  margin: 12px 0 6px;
+  color: var(--muted);
+}
+
+.popup .result-list {
+  max-height: 240px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popup .result-list li {
+  font-size: 13px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.popup .result-list li .reason {
+  color: var(--muted);
+}
+
+.popup .status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.popup .error {
+  color: var(--danger);
+  font-size: 13px;
+}
